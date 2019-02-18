@@ -1,0 +1,957 @@
+    1  clear
+    2  sudo apt-get update -y
+    3  clear
+    4  python -v
+    5  python 
+    6  sudo apt-get install software-properties-common -y
+    7  sudo apt-add-repository ppa:ansible/ansible
+    8  sudo apt-get update && sudo apt-get install ansible -y
+    9  ansible
+   10  python
+   11  ansible
+   12  ls
+   13  exit
+   14  more /etc/ansible/ansible.cfg 
+   15  ls /etc/ansible/
+   16  cd /etc/ansible/
+   17  ls
+   18  cd
+   19  vi test
+   20  exit
+   21  ls
+   22  vi test
+   23  ansible -m all ping 
+   24  ansible all -m ping 
+   25  ansible localhost -m ping 
+   26  ansible -i test -m ping 
+   27  ansible all -i test -m ping 
+   28  vi test 
+   29  ansible all -i test -m ping 
+   30  ansible all -m ping 
+   31  cat /etc/ansible/hosts 
+   32  vi /etc/ansible/hosts 
+   33  sudo vi /etc/ansible/hosts 
+   34  ansible all -m ping
+   35  ls
+   36  exit
+   37  ls
+   38  sudo vi /etc/ansible/hosts 
+   39  ansible all -m ping
+   40  sudo vi /etc/ansible/hosts 
+   41  ansible all -m ping
+   42  exit
+   43  ansible all -m ping
+   44  sudo vi /etc/ansible/hosts 
+   45  ansible all -m ping
+   46  sudo vi /etc/ansible/hosts 
+   47  ansible all -m ping
+   48  ansible all -m ping --private-key pavan-test.pem 
+   49  ansible all -m ping
+   50  ping localhost
+   51  ansible all -m ping
+   52  ls -l
+   53  rm al-aleti-west1.pem pavan-test.pem test 
+   54  ls
+   55  rm al-aleti-west1.pem 
+   56  ls
+   57  exit
+   58  ping 34.247.159.224
+   59  ansible all -m ping
+   60  ls /etc/ansible/
+   61  ls /etc/ansible/roles/
+   62  less /etc/ansible/hosts 
+   63  less /etc/ansible/ansible.cfg 
+   64  ansible all -m ping
+   65  sudo vi /etc/ansible/hosts 
+   66  ansible all -m ping
+   67  ansible all -m ping --private-key=al-aleti-west1.pem]
+   68  ls
+   69  exit
+   70  ls
+   71  ansible all -m ping --private-key=al-aleti-west1.pem
+   72  ansible all -m ping --private-key=al-aleti-west1.pem -u ec2-user
+   73  sudo vi /etc/ansible/hosts 
+   74  ansible all -m ping
+   75  ansible all -m command -a "pwd"
+   76  ansible all -m command -a "uname -a"
+   77  ansible all -m command -a "free -m"
+   78  less /etc/ansible/hosts 
+   79  ansible all -m command -a "free -m|grep a"
+   80  ansible all -m shell -a "free -m|grep a"
+   81  ansible all -m shell -a "free -m|grep a" -v
+   82  ansible all -m shell -a "free -m|grep a" -vv
+   83  ansible all -m shell -a "free -m|grep a" -vvv
+   84  ansible all -m shell -a "free -m|grep a" -vvvv
+   85  less /etc/ansible/ansible.cfg 
+   86  ansible all -m shell -a "free -m|grep a" 
+   87  ansible all -m shell -a "free -m|grep a" -f 1
+   88  less /etc/ansible/ansible.cfg 
+   89  ansible all -m shell -a "free -m|grep a"
+   90  ansible all -m shell -a "free -m|grep a" -f 1
+   91  ansible all -m shell -a "free -m|grep a" -f 0
+   92  ansible all -m command -a "apt-get update -y"
+   93  ansible all -m apt -a "name=git state=present"
+   94  ansible all -m apt -a "name=git state=present" --become=yes
+   95  ansible all -m apt -a "name=git state=present" --become=true
+   96  ansible all -m apt -a "name=git state=present" --become
+   97  ansible all -m apt -a "name=git state=absent" --become
+   98  ansible all -m shell -a "git"
+   99  ansible all -m apt -a "name=git state=present" --become
+  100  ansible all -m shell -a "git"
+  101  ansible all -m apt -a "name=git state=absent" --become
+  102  ansible all -m shell -a "git"
+  103  ansible all -m shell -a "git" -vvvv
+  104  ansible all -m setup
+  105  ansible all -m setup -a "filter=ansble_os_family"
+  106  ansible all -m setup -a "filter=ansble_os*"
+  107  ansible all -m setup -a "filter=ansible_os_family"
+  108  ansible all -m setup -a "filter=ansible_dist*"
+  109  ansible all -m setup -a "filter=ansible_dist*" -vvvv
+  110  ansible all -m shell -a "printenv"
+  111  history
+  112  aws
+  113  exit
+  114  vi ng.yml
+  115  vi index.html
+  116  vi inventory
+  117  ansible-playbook -i inventory ng.yml --private-key pavan-test.pem 
+  118  vi inventory 
+  119  vi ng.yml 
+  120  ansible-playbook -i inventory ng.yml --private-key al-aleti-west1.pem 
+  121  vi ng.yml 
+  122  ansible-playbook -i inventory ng.yml --private-key al-aleti-west1.pem 
+  123  vi ng.yml 
+  124  ansible-playbook -i inventory ng.yml --private-key al-aleti-west1.pem 
+  125  vi ng.yml 
+  126  ansible-playbook -i inventory ng.yml --private-key al-aleti-west1.pem 
+  127  vi ng.yml 
+  128  ansible-playbook -i inventory ng.yml --private-key al-aleti-west1.pem 
+  129  ls -l
+  130  vi ansible.cfg
+  131  ansible-playbook -i inventory ng.yml --private-key al-aleti-west1.pem 
+  132  vi ansible.cfg
+  133  ansible-playbook -i inventory ng.yml --private-key al-aleti-west1.pem 
+  134  ls -la
+  135  ls
+  136  rm ng.retry 
+  137  ansible-playbook -i inventory ng.yml --private-key al-aleti-west1.pem 
+  138  ls
+  139  cat ansible.cfg 
+  140  ls
+  141  mv ansible.cfg ansible.cfg1
+  142  ansible-playbook -i inventory ng.yml --private-key al-aleti-west1.pem 
+  143  ls 
+  144  cat ansible.cfg1 
+  145  rm ansible.cfg1 
+  146  ls
+  147  rm ng.retry 
+  148  ls
+  149  ansible-playbook -i inventory ng.yml --private-key al-aleti-west1.pem 
+  150  ls
+  151  cat ansible.cfg >>[defaults]
+  152  cat ansible.cfg << [defaults]
+  153  retry_files_enabled = False # Do not create them
+  154  ls
+  155  rm \[defaults\] 
+  156  ls
+  157  clear
+  158  vi ansible.cfg
+  159  cat ansible.cfg 
+  160  ls
+  161  rm ng.retry 
+  162  ansible-playbook -i inventory ng.yml --private-key al-aleti-west1.pem 
+  163  ls
+  164  cat ng.yml 
+  165  clear
+  166  history
+  167  cat inventory 
+  168  rm inventory 
+  169  exit
+  170  clear
+  171  history
+  172  ansible all -m shell -a "printenv"
+  173  vi inventory
+  174  more inventory 
+  175  ansible all -i inventory -m shell -a "printenv"
+  176  ansible web -i inventory -m shell -a "printenv"
+  177  ansible database -i inventory -m shell -a "printenv"
+  178  ansible web -i inventory -m setup -a "filter=ansible_os_family"
+  179  ansible database -i inventory -m setup -a "filter=ansible_os_family"
+  180  sudo su
+  181  exit
+  182  ansible database -i inventory -m setup -a "filter=ansible_os_family"
+  183  ansible web -i inventory -m setup -a "filter=ansible_os_family"
+  184  vi apache.yml
+  185  ansible web -i inventory -m setup -a "filter=ansible_os_family"
+  186  ansible-playbook -i inventory apache.yml 
+  187  vi apache.yml
+  188  cat apache.yml 
+  189  cat inventory 
+  190  ansible-playbook -i inventory apache.yml 
+  191  vi apache.yml
+  192  git
+  193  ansible-playbook -i inventory apache.yml 
+  194  vi apache.yml
+  195  ansible-playbook -i inventory apache.yml 
+  196  ansible-playbook -i inventory apache.yml --syntax-check
+  197  vi apache.yml
+  198  ansible-playbook -i inventory apache.yml --syntax-check
+  199  vi apache.yml
+  200  ansible-playbook -i inventory apache.yml --syntax-check
+  201  ansible-playbook -i inventory apache.yml
+  202  cat apache.yml 
+  203  vi apache.yml
+  204  ansible-playbook -i inventory apache.yml
+  205  cat apache.yml 
+  206  vi apache.yml
+  207  ansible-playbook -i inventory apache.yml --syntax-check
+  208  ansible-playbook -i inventory apache.yml
+  209  vi apache.yml
+  210  ansible-playbook -i inventory apache.yml
+  211  vi apache.yml
+  212  ansible-playbook -i inventory apache.yml --syntax-check
+  213  ansible-playbook -i inventory apache.yml
+  214  ansible-playbook -i inventory apache.yml --become
+  215  service status apache22
+  216  service status apache2
+  217  service apache2 status
+  218  vi apache.yml 
+  219  cat apache.yml 
+  220  ansible-playbook -i inventory apache.yml
+  221  service apache2 status
+  222  vi apache.yml 
+  223  ansible-playbook -i inventory apache.yml
+  224  ansible-playbook -i inventory apache.yml -vvv
+  225  ansible-playbook -i inventory apache.yml
+  226  vi apache.yml 
+  227  ansible-playbook -i inventory apache.yml
+  228  ansible web -i inventory -m apt -a "name=apache2 state=absent enabled=no" --become
+  229  ansible web -i inventory -m apt -a "name=apache2,state=absent,enabled=no" --become
+  230  ansible web -i inventory -m apt -a "package=apache2, state=absent, enabled=no" --become
+  231  ansible web -i inventory -m apt -a "package=apache2 state=absent" --become
+  232  ansible-playbook -i inventory apache.yml
+  233  vi apache.yml 
+  234  ansible-playbook -i inventory apache.yml
+  235  cat apache.yml 
+  236  service apache2 status
+  237  ps -ef | grep apache2
+  238  curl http://localhost
+  239  vi index.html
+  240  cat index.html 
+  241  cp index.html /var/www/html/index.html
+  242  sudo cp index.html /var/www/html/index.html
+  243  rm /var/www/html/index.html 
+  244  sudo rm /var/www/html/index.html 
+  245  vi apache.yml 
+  246  ansible-playbook -i inventory apache.yml
+  247  vi apache.yml 
+  248  ansible-playbook -i inventory apache.yml --syntax-check
+  249  ansible-playbook -i inventory apache.yml 
+  250  vi apache.yml 
+  251  ansible-playbook -i inventory apache.yml 
+  252  vi index.html 
+  253  ansible-playbook -i inventory apache.yml 
+  254  sudo apt-get install git -y
+  255  git init
+  256  apt
+  257  apt-get
+  258  git clone https://github.com/aleti-pavan/ansible.git
+  259  ls -la
+  260  vi .gitignore
+  261  mkdir class2
+  262  mv index.html class2/
+  263  mv inventory class2/
+  264  mv apache.yml class2/
+  265  mv ng.yml class2/
+  266  cat ansible.cfg 
+  267  git status
+  268  ls -la
+  269  cd ansible/
+  270  ls
+  271  cd
+  272  git add .
+  273  git status
+  274  cat ansible
+  275  cd class2/
+  276  git add .
+  277  git status
+  278  git commit -am "commiting latest class"
+  279  git push https://github.com/aleti-pavan/ansible.git master
+  280  git push https://github.com/aleti-pavan/ansible.git master -f
+  281  cd ..
+  282  git add .
+  283  cp -r ansible/ class2/
+  284  ls class2/
+  285  ls ansible/
+  286  git add .
+  287  git status
+  288  ls class2/
+  289  cd class2/
+  290  ls ansible/
+  291  git add .
+  292  git commit -am "adding ansible files"
+  293  git status
+  294  git add .
+  295  git status
+  296  git commit -am"commit all"
+  297  git push https://github.com/aleti-pavan/ansible.git ansible
+  298  git commit -am "commit all"
+  299  git status
+  300  git log
+  301  git push https://github.com/aleti-pavan/ansible.git master
+  302  cd
+  303  ls
+  304  cd class2/
+  305  ls
+  306  cp -r ansible/ .
+  307  cd ansible/
+  308  ls
+  309  cd ansible/
+  310  ls
+  311  cd ..
+  312  rm ansible/
+  313  rm -r ansible/
+  314  ls
+  315  cd ..
+  316  cp -r ansible/ .
+  317  ls
+  318  cp ansible/* .
+  319  cp -r ansible/* .
+  320  ls
+  321  ls roles/
+  322  ls vault/
+  323  git status
+  324  git add .
+  325  git commit -am "commiting previous files"
+  326  git push https://github.com/aleti-pavan/ansible.git master
+  327  cp -r ..
+  328  cp -r . ..
+  329  ls
+  330  cd ..
+  331  ls
+  332  git add .
+  333  git status
+  334  git commit -am "commit"
+  335  git push https://github.com/aleti-pavan/ansible.git master
+  336  cd class2/
+  337  ls
+  338  ls -l
+  339  git rm 1*
+  340  git rm 2*
+  341  git r*
+  342  gir rm r*
+  343  git rm r*
+  344  git -r rm r*
+  345  git rm -r r*
+  346  git rm t*
+  347  git rm n*
+  348  git rm h*
+  349  git rm f*
+  350  git status
+  351  git rm README.md 
+  352  git rm i*
+  353  git rm l*
+  354  git rm *2.yml
+  355  git status
+  356  git add .
+  357  git status
+  358  git commit -a "removing duplicates"
+  359  git push https://github.com/aleti-pavan/ansible.git master
+  360  rm -r r*
+  361  git push https://github.com/aleti-pavan/ansible.git master
+  362  ls -la
+  363  rm -r ansible/
+  364  rm -rf static_files/
+  365  rm -rf vault
+  366  ls 
+  367  rm command_history 
+  368  rm condition1.yml 
+  369  rm one.txt 
+  370  ls
+  371  ls 
+  372  rm site.yml 
+  373  rm users.yml 
+  374  rm vault_pass_file 
+  375  vi ng.yml
+  376  ls 
+  377  git add .
+  378  cd ..
+  379  git add .
+  380  git status
+  381  git commit -am "remove duplicates in class 2 folder"
+  382  git push ---
+  383  - name: Install nginx
+  384  git push https://github.com/aleti-pavan/ansible.git master
+  385  ls
+  386  cat inventory 
+  387  ls
+  388  cd class2/
+  389  ls
+  390  vi inventory
+  391  vi index.html
+  392  exit
+  393  ls
+  394  git remote -v 
+  395  cd class2/
+  396  ls
+  397  git remote -v
+  398  cat inventory 
+  399  ls -la
+  400  cat inventory 
+  401  cd ..
+  402  pwd
+  403  ls -la
+  404  rm -rf *.yml
+  405  ls
+  406  rm -rf class2
+  407  ls
+  408  cd ansible/
+  409  ls
+  410  cd ..
+  411  ls
+  412  rm -rf ansible
+  413  ls
+  414  cd static_files/
+  415  ls
+  416  cat index.html 
+  417  cat nginx.conf.tfl 
+  418  cd ..
+  419  ls
+  420  ls roles/
+  421  rm -rf roles
+  422  rm -rf vault
+  423  rm -rf static_files
+  424  ls
+  425  rm index.html one.txt three.txt two.txt 
+  426  cat vault_pass_file 
+  427  rm vault_pass_file 
+  428  ls
+  429  cat README.md 
+  430  rm README.md 
+  431  rm command_history 
+  432  ls
+  433  cat inventory 
+  434  rm inventory 
+  435  cat ansible.cfg 
+  436  git remote add -v
+  437  git remote -v
+  438  ls
+  439  vi inventory
+  440  git clone https://github.com/aleti-pavan/ansible.git
+  441  ls
+  442  cd ansible/
+  443  ls
+  444  cat ansible
+  445  can ansible.cfg 
+  446  cd ansible/
+  447  ls
+  448  cd ..
+  449  rm -rf ansible
+  450  ls
+  451  cat condition1.yml 
+  452  cat inventory 
+  453  rm one.txt two.txt three.txt 
+  454  cat loop1.yml 
+  455  cat loop2.yml 
+  456  uname -a
+  457  yum
+  458  apt
+  459  apt-get search java
+  460  apt search
+  461  apt search java
+  462  apt search jdk
+  463  apt search open-jdk
+  464  apt search open-jdk*
+  465  apt search openjdk-8-jdk
+  466  exit
+  467  clear
+  468  ls
+  469  cd ansible/
+  470  ls
+  471  cd class2/
+  472  ls
+  473  git remote -v
+  474  elinks
+  475  ls
+  476  cat apache.yml 
+  477  vi elinks.yml
+  478  cat elinks.yml 
+  479  ls
+  480  cat ../inventory 
+  481  cat /etc/ansible/hosts 
+  482  vi ../inventory 
+  483  cat ../inventory 
+  484  vi ../inventory 
+  485  cat elinks.yml 
+  486  ansible-playbook elinks.yml --syntax-check
+  487  ansible-playbook elinks.yml
+  488  mv ../inventory .
+  489  ansible-playbook elinks.yml
+  490  ansible-playbook elinks.yml -i inventory 
+  491  elinks
+  492  man elinks
+  493  vi elinks.yml 
+  494  ansible-playbook elinks.yml -i inventory 
+  495  elink
+  496  elins
+  497  elinks
+  498  cat elinks.yml 
+  499  vi elinks.yml 
+  500  ansible-playbook elinks.yml -i inventory 
+  501  vi elinks.yml 
+  502  ansible-playbook elinks.yml -i inventory 
+  503  vi elinks.yml 
+  504  ansible-playbook elinks.yml -i inventory 
+  505  vi elinks.yml 
+  506  ansible-playbook elinks.yml -i inventory 
+  507  service status elinks
+  508  service elinks status
+  509  vi elinks.yml 
+  510  cp elinks.yml jenkins.yml
+  511  apt search jenkins
+  512  vi apache.yml 
+  513  cat apache.yml 
+  514  service apache2 status
+  515  vi apache.yml 
+  516  ansible-playbook -i inventory apache.yml 
+  517  pying index.html] ********************************************************************************************************
+  518  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+  519  clear
+  520  vi apache.yml 
+  521  ansible-playbook -i inventory apache.yml 
+  522  ansible-playbook -i inventory apache.yml --syntax-check
+  523  vi apache.yml 
+  524  ansible-playbook -i inventory apache.yml --syntax-check
+  525  ansible-playbook -i inventory apache.yml
+  526  vi apache.yml 
+  527  cat apache.
+  528  cat apache.yml 
+  529  ansible-playbook -i inventory apache.yml
+  530  vi apache.yml 
+  531  ansible-playbook -i inventory apache.yml
+  532  vi apache.yml 
+  533  ansible-playbook -i inventory apache.yml
+  534  vi apache.yml 
+  535  ansible-playbook -i inventory apache.yml
+  536  vi inventory 
+  537  cp apache.yml apache_condition.yml
+  538  vi apache_condition.yml 
+  539  ansible-playbook -i inventory apache_condition.yml 
+  540  vi apache_condition.yml 
+  541  ansible-playbook -i inventory apache_condition.yml 
+  542  vi apache_condition.yml 
+  543  ansible-playbook -i inventory apache_condition.yml --syntax-check
+  544  ansible-playbook -i inventory apache_condition.yml 
+  545  vi apache_condition.yml 
+  546  ansible-playbook -i inventory apache_condition.yml 
+  547  ls ../condition1.yml 
+  548  cat ../condition1.yml 
+  549  clear
+  550  vi apache_condition.yml 
+  551  ansible-playbook -i inventory apache_condition.yml 
+  552  vi apache_condition.yml 
+  553  ansible-playbook -i inventory apache_condition.yml 
+  554  vi apache_condition.yml 
+  555  ansible-playbook -i inventory apache_condition.yml 
+  556  ansible-playbook -i inventory apache_condition.yml --syntax-check
+  557  cat ../condition1.yml 
+  558  cat inventory 
+  559  clear
+  560  vi apache_condition.yml 
+  561  ansible-playbook -i inventory apache_condition.yml 
+  562  vi apache_condition.yml 
+  563  ansible-playbook -i inventory apache_condition.yml 
+  564  vi apache_condition.yml 
+  565  ansible-playbook -i inventory apache_condition.yml --syntax-check
+  566  ansible-playbook -i inventory apache_condition.yml 
+  567  cat /etc/os-release 
+  568  cat apache_condition.yml 
+  569  vi java.yml
+  570  ansible-playbook -i inventory java.yml --syntax-check
+  571  ansible-playbook -i inventory java.yml
+  572  cat java.yml 
+  573  vi java.yml 
+  574  ansible-playbook -i inventory java.yml
+  575  vi java.yml 
+  576  ansible-playbook -i inventory java.yml
+  577  vi users.yml
+  578  cat /etc/passwd
+  579  ansible-playbook -i inventory users.yml --syntax-check
+  580  ansible-playbook -i inventory users.yml
+  581  vi users.yml
+  582  ansible-playbook -i inventory users.yml
+  583  cat /etc/passwd
+  584  vi users.yml
+  585  ansible-playbook -i inventory users.yml
+  586  cp users.yml users_loops.yml
+  587  ls
+  588  vi users_loops.yml 
+  589  cat users_loops.yml 
+  590  ansible-playbook -i inventory users_loops.yml --syntax-check
+  591  cat users_loops.yml 
+  592  vi users_loops.yml 
+  593  ansible-playbook -i inventory users_loops.yml --syntax-check
+  594  ansible-playbook -i inventory users_loops.yml
+  595  vi users_loops.yml 
+  596  cp users_loops.yml users_loops2.yml 
+  597  vi users_loops2.yml 
+  598  ansible-playbook -i inventory users_loops.yml --syntax-check
+  599  ansible-playbook -i inventory users_loops.yml
+  600  vi users_loops2.yml 
+  601  cp users_loops2.yml users_loops3.yml
+  602  vi users_loops3.yml 
+  603  ansible-playbook -i inventory users_loops3.yml --syntax-check
+  604  ansible-playbook -i inventory users_loops3.yml
+  605  git add .
+  606  git status
+  607  vi .gitignore
+  608  git add .
+  609  git commit -am "pushing feb 16th class files"
+  610  git push origin
+  611  git rm *.rety
+  612  git rm *.retry
+  613  git add .
+  614  git commit -am "removing retry files"
+  615  git push origin
+  616  ls
+  617  vi .gitignore 
+  618  cat java.yml 
+  619  vi java.yml 
+  620  ls
+  621  cat users.yml 
+  622  vi users.yml 
+  623  vi users_loops.yml 
+  624  cat users_loops2.yml 
+  625  vi users_loops2.yml 
+  626  cat users_loops3.yml 
+  627  vi users_loops3.yml 
+  628  ls
+  629  cat apache_condition.yml 
+  630  vi apache_condition.yml 
+  631  ls
+  632  git rm jenkins.yml 
+  633  git add .
+  634  git commit -am " removing jenkins.yml"
+  635  git push origin
+  636  ls
+  637  cat ansible
+  638  cat ansible.cfg 
+  639  cat /etc/ansible/ansible.cfg 
+  640  grep *vault* /etc/ansible/ansible.cfg 
+  641  grep vault /etc/ansible/ansible.cfg 
+  642  ls
+  643  cat ansible/apache.yml 
+  644  cat ansible/apache2.yml 
+  645  clear
+  646  cat ansible/apache.yml 
+  647  service apache2 status
+  648  curl localhost
+  649  vi ansible/apache.yml 
+  650  ansible-playbook -i inventory ansible/apache.yml 
+  651  curl localhost
+  652  service apache2 status
+  653  clear
+  654  curl localhost
+  655  clear
+  656  cat inventory 
+  657  cp inventory hosts
+  658  vi hosts 
+  659  cat hosts 
+  660  clear
+  661  cat hosts 
+  662  vi apache.yml
+  663  ansible-playbook -i hosts apache.yml 
+  664  vi apache.yml 
+  665  ansible-playbook -i hosts apache.yml 
+  666  vi apache.yml 
+  667  ansible-playbook -i hosts apache.yml --syntax-check
+  668  ansible-playbook -i hosts apache.yml
+  669  vi apache.yml 
+  670  ansible-playbook -i hosts apache.yml
+  671  curl localhost
+  672  systemctl status apache2
+  673  cat ansible/apache2.yml 
+  674  vi apache.yml 
+  675  ansible-playbook -i hosts apache.yml
+  676  vi apache.yml 
+  677  ansible-playbook -i hosts apache.yml
+  678  less apache.yml 
+  679  systemctl status apache22
+  680  systemctl status apache2
+  681  curl localhost
+  682  vi apache.yml 
+  683  ansible-playbook -i hosts apache.yml
+  684  curl localhost
+  685  clear
+  686  vi apache.yml 
+  687  ansible-playbook -i hosts apache.yml
+  688  curl localhost
+  689  vi apache.yml -
+  690  ansible-playbook -i hosts apache.yml --syntax-check
+  691  ansible-playbook -i hosts apache.yml
+  692  vi apache.yml 
+  693  ansible-playbook 
+  694  vi uninstall.yml
+  695  ansible-playbook -i hosts uninstall.yml 
+  696  ansible-playbook -i hosts apache.yml
+  697  clear
+  698  ls 
+  699  cd ansible/
+  700  ls
+  701  cd class2/
+  702  ls
+  703  cd ..
+  704  cat loop1.yml 
+  705  clear
+  706  cd class2/
+  707  ls
+  708  clear
+  709  ls
+  710  cat users_loops3.yml 
+  711  cat elinks.yml 
+  712  cp elinks.yml package_loop1.yml
+  713  vi package_loop1.yml 
+  714  ansible-playbook -i inventory package_loop1.yml 
+  715  vi package_loop1.yml 
+  716  ansible-playbook -i inventory package_loop1.yml 
+  717  vi package_loop1.yml 
+  718  cp package_loop1.yml package_loop2.yml
+  719  vi package_loop2.yml 
+  720  ansible-playbook -i inventory package_loop2.yml 
+  721  vi package_loop2.yml 
+  722  ansible-playbook -i inventory package_loop2.yml 
+  723  ansible-playbook -i inventory package_loop2.yml -vv
+  724  ansible-playbook -i inventory package_loop2.yml -vvv
+  725  vi package_loop2.yml 
+  726  vi variable1.yml
+  727  ansible-playbook -i inventory variable1.yml 
+  728  vi variable1.yml
+  729  ansible-playbook -i inventory variable1.yml 
+  730  vi variable1.yml
+  731  cp variable1.yml variable2.yml
+  732  vi variable2.yml 
+  733  ansible-playbook -i inventory variable1.yml 
+  734  ansible-playbook -i inventory variable2.yml 
+  735  cat variable2.yml 
+  736  ansible-playbook -i inventory variable2.yml --extra-vars "pass=pa1"
+  737  ansible-playbook -i inventory variable2.yml --extra-vars "pass=pa1" -vvv
+  738  ansible-playbook -i inventory variable2.yml -e pass=pass1
+  739  ansible-playbook -i inventory variable2.yml -e pass=pass1 -vv
+  740  cp variable2.yml variable3.yml
+  741  vi variable3.yml 
+  742  ansible-playbook -i inventory variable3.yml --syntax-check
+  743  ansible-playbook -i inventory variable3.yml
+  744  vi variable3.yml 
+  745  ansible-playbook -i inventory variable3.yml
+  746  vi variable3.yml 
+  747  ansible-playbook -i inventory variable3.yml
+  748  vi variable3.yml 
+  749  ansible-playbook -i inventory variable3.yml
+  750  vi variable3.yml 
+  751  ansible-playbook -i inventory variable3.yml -vv
+  752  ansible-playbook -i inventory variable3.yml -vvvv
+  753  ansible-playbook -i inventory variable3.yml --syntax-check
+  754  vi variable3.
+  755  vi variable3.yml 
+  756  vi register1.yml
+  757  ansible-playbook -i inventory register1.yml 
+  758  vi register1.yml 
+  759  ansible-playbook -i inventory register1.yml 
+  760  vi register1.yml 
+  761  ansible-playbook -i inventory register1.yml 
+  762  cp register1.yml register2.yml
+  763  vi register2.yml 
+  764  ansible-playbook -i inventory register2.yml 
+  765  ls
+  766  vi variable3.yml 
+  767  ansible-playbook -i inventory variable3.yml 
+  768  vi prompt1.yml
+  769  ansible-playbook -i inventory prompt1.yml --syntax-check
+  770  ansible-playbook -i inventory prompt1.yml
+  771  ansible-playbook -i inventory prompt1.yml -vvv
+  772  ansible-playbook -i inventory prompt1.yml
+  773  vi prompt1.yml
+  774  ansible-playbook -i inventory prompt1.yml --syntax-check
+  775  vi prompt1.yml
+  776  ansible-playbook -i inventory prompt1.yml
+  777  cp prompt1.yml prompt2.yml
+  778  vi prompt2.yml 
+  779  ansible-playbook -i inventory prompt2.yml --syntax-check
+  780  ansible-playbook -i inventory prompt2.yml 
+  781  cp prompt2.yml prompt3.yml
+  782  vi prompt3.yml 
+  783  ansible-playbook -i inventory prompt3.yml 
+  784  cp prompt3.yml prompt4.yml
+  785  vi prompt4.yml 
+  786  ansible-playbook -i inventory prompt4.yml 
+  787  cp prompt4.yml prompt5.yml
+  788  vi prompt5.yml 
+  789  ansible-playbook -i inventory prompt5.yml 
+  790  vi until1.yml
+  791  pwd
+  792  ls
+  793  vi until1.yml 
+  794  ansible-playbook -i inventory until1.yml 
+  795  vi until1.yml 
+  796  ansible-playbook -i inventory until1.yml 
+  797  vi until1.yml 
+  798  ansible-playbook -i inventory until1.yml 
+  799  ansible-playbook -i inventory until1.yml -vvvv
+  800  vi until1.yml 
+  801  ansible-playbook -i inventory until1.yml
+  802  ansible-playbook -i inventory until1.yml --check
+  803  ansible-playbook -i inventory prompt3.yml --check
+  804  vi tags1.yml
+  805  ansible-playbook -i inventory tags1.yml 
+  806  vi tags1.yml
+  807  ansible-playbook -i inventory tags1.yml 
+  808  vi tags1.yml
+  809  ansible-playbook -i inventory tags1.yml 
+  810  ansible-playbook -i inventory tags1.yml --tags install
+  811  ansible-playbook -i inventory tags1.yml --tags stop
+  812  cat tags1.yml 
+  813  vi tags1.yml 
+  814  ansible-playbook -i inventory tags1.yml --tags stop
+  815  ansible-playbook -i inventory tags1.yml --tags start
+  816  ansible-playbook -i inventory tags1.yml --tags start,stop
+  817  ansible-playbook -i inventory tags1.yml --tags install,start,stop
+  818  ansible-playbook -i inventory tags1.yml --skip-tags install
+  819  ansible-playbook -i inventory tags1.yml --tags install,stop,start
+  820  ansible-playbook -i inventory tags1.yml --tags install,start
+  821  ansible-playbook -i inventory tags1.yml --tags start,install,stop
+  822  ansible-playbook -i inventory tags1.yml --tags start,install,stop --verbose
+  823  ls
+  824  git add .
+  825  git status
+  826  git remote -v
+  827  git push origin
+  828  git commit -am "17th Feb 2019"
+  829  git push origin
+  830  ansible-playbook -i inventory tags1.yml --tags install
+  831  ansible-playbook -i inventory tags1.yml --tags stop
+  832  ansible-playbook -i inventory tags1.yml --tags start
+  833  ansible-playbook -i inventory tags1.yml --tags start,install,stop
+  834  ansible-playbook -i inventory tags1.yml --skip-tags install
+  835  ansible-playbook -i inventory tags1.yml --skip-tags install,stop
+  836  ansible-playbook -i inventory tags1.yml --skip-tags install,stop --verbose
+  837  ansible-playbook -i inventory tags1.yml --skip-tags install,stop -vvvv
+  838  ansible-playbook -i inventory tags1.yml --tags stop,start
+  839  cat tags1.yml 
+  840  ls
+  841  git clone https://github.com/aleti-pavan/ansible_class.git
+  842  ls
+  843  cd ansible_class/
+  844  ls
+  845  ls ../ansible/
+  846  cp -r ../ansible/class2/* .
+  847  ls
+  848  git remote -v
+  849  git add .
+  850  git status
+  851  git commit -am "commiting into another repository"
+  852  git push origin
+  853  ls
+  854  mkdir playbooks
+  855  cp * playbooks/
+  856  cp -r playbooks/
+  857  ls
+  858  cp -r * playbooks/
+  859  cp -r *.yml playbooks/
+  860  ls
+  861  mv -r *.yml playbooks/
+  862  rm -rf *.yml
+  863  ls
+  864  ls playbooks/
+  865  cd ..
+  866  cd ansible_class/
+  867  ls
+  868  ls ~/.ssh
+  869  cd ..
+  870  ls
+  871  ls -la
+  872  ssh-keygen
+  873  cat .ssh/id_rsa.pub 
+  874  git clone git@github.com:aleti-pavan/ansible_class.git
+  875  ls
+  876  rm -rf ansible_class/
+  877  ls
+  878  git clone git@github.com:aleti-pavan/ansible_class.git
+  879  git remote -v
+  880  ls
+  881  cd ansible
+  882  cd ..
+  883  cd ansible_class/
+  884  ls
+  885  mkdir playbooks
+  886  mv -r *.yml playbooks/
+  887  mv *.yml playbooks/
+  888  ls
+  889  git add .
+  890  git status
+  891  git commit -am "added playbooks dir for readibility"
+  892  git push origin master
+  893  ls
+  894  cd playbooks/
+  895  ls
+  896  mkdir var_promt_examples
+  897  mv prompt* var_promt_examples/
+  898  ls -l
+  899  git add .
+  900  git commit -am "var prompt examples to the directory"
+  901  git push origin
+  902  ls
+  903  mkdir register_examples
+  904  mv register*.yml register_examples/
+  905  ls -la
+  906  git add .
+  907  git status
+  908  git commit -am "register examples"
+  909  git push origin
+  910  ls
+  911  vi elinks.yml 
+  912  git add .
+  913  git commit -am "changed elinks playbook"
+  914  git push origin
+  915  git remote -v
+  916  cd ..
+  917  git remote -v
+  918  cd ..
+  919  git remote -v
+  920  cd ansible_class/
+  921  ls
+  922  cd playbooks/
+  923  ls
+  924  mkdir loop_examples
+  925  mv *loop*.yml loop_examples/
+  926  ls
+  927  git add .
+  928  git commit -am " pushing loops to its own folder"
+  929  git push origin
+  930  ls
+  931  mkdir until_example
+  932  mv until*.yml until_example/
+  933  ls
+  934  cat users.yml 
+  935  cat apache_condition.yml 
+  936  mkdir condition_example
+  937  mv apache_condition.yml condition_example/
+  938  ls
+  939  cat tags1.yml 
+  940  mkdir tags_example
+  941  mv tags1.yml tags_example/
+  942  ls
+  943  cat users.yml 
+  944  cat loop_examples/users_loops1
+  945  cat loop_examples/users_loops.yml 
+  946  cat variable1.yml 
+  947  cat variable2.yml 
+  948  cat variable3.yml 
+  949  mkdir variable_example
+  950  mv variable*.yml variable_example/
+  951  ls
+  952  git add .
+  953  git commit -am "variable example folder"
+  954  git push origin
+  955  ls
+  956  history
+  957  history > command_history.txt
