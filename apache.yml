@@ -1,0 +1,21 @@
+---
+- hosts: all
+  tasks:
+      - name: install apache
+        apt: 
+           name: apache2 
+           state: latest
+        become: yes
+        notify: restart apache2
+      - name: index.html
+        copy:
+           content: "this is ansible playbook \n"
+           dest: /var/www/html/index.html
+        become: yes
+  handlers:
+      - name: restart apache2
+        service:
+            name: apache2
+            state: restarted
+            enabled: yes
+        become: yes
