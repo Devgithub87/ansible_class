@@ -6,7 +6,3 @@
             name: elinks 
             state: latest
         become: yes
-      - name: restart elinks
-        service:
-            name: elinks
-            state: started
