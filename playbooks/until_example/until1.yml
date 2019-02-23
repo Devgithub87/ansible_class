@@ -2,7 +2,7 @@
 - hosts: web
   tasks:
           - name: printenv
-            shell: l /home/ubuntu/ansible/class2 
+            shell: ls /home/ubuntu/ansible/class2 
             register: out
             until: out is succeeded
             retries: 10

@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+          - name: printenv
+            shell: p 
+            register: out
+          - name: print ls
+            debug:
+                    var: out
