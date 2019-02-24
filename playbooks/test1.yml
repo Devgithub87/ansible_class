@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
           - name: printenv
-            shell: p 
+            shell: pwd 
             register: out
           - name: print ls
             debug:
