@@ -1,3 +1,11 @@
 ---
 # defaults file for tomcat
-tomcat_package: "tomcat"
+
+http_port: 8080
+https_port: 8443
+
+admin_username: admin
+admin_password: adminsecret
+
+tomcat_conf_folder: "/usr/share/tomcat/conf/"
+tomcat_symlink_path: "/usr/share/tomcat"

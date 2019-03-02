@@ -4,3 +4,8 @@
   service:
           name: tomcat
           state: restarted
+
+- name: restart iptables
+  service: 
+        name: iptables 
+        state: restarted
